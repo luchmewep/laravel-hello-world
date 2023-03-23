@@ -1,0 +1,68 @@
+{
+    "name": "luchavez/hello-world",
+    "description": "Just a simple Hello World package.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "James Carlo Luchavez",
+            "email": "jamescarloluchavez@gmail.com",
+            "homepage": "https://www.linkedin.com/in/jsluchavez"
+        },
+        {
+            "name": "Fligno",
+            "email": "apps@fligno.com",
+            "homepage": "https://fligno.com/"
+        }
+    ],
+    "homepage": "https://github.com/luchavez/hello-world",
+    "keywords": [
+        "Laravel",
+        "HelloWorld"
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "~8|~9",
+        "luchavez/starter-kit": "^1.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest",
+        "phpunit/phpunit": "~9.0",
+        "orchestra/testbench": "~6|~7"
+    },
+    "suggest": {
+        "luchavez/starter-kit": "^1.0",
+        "luchavez/boilerplate-generator": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Luchavez\\HelloWorld\\": "src/",
+            "Luchavez\\HelloWorld\\Database\\Seeders\\": "database/seeders/",
+            "Luchavez\\HelloWorld\\Database\\Factories\\": "database/factories/",
+            "Luchavez\\HelloWorld\\Domains\\Greetings\\": "domains/Greetings/src/",
+            "Luchavez\\HelloWorld\\Domains\\Greetings\\Database\\Factories\\": "domains/Greetings/database/factories/",
+            "Luchavez\\HelloWorld\\Domains\\Greetings\\Database\\Seeders\\": "domains/Greetings/database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Luchavez\\HelloWorld\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Luchavez\\HelloWorld\\Providers\\HelloWorldServiceProvider",
+                "Luchavez\\HelloWorld\\Domains\\Greetings\\Providers\\GreetingsProvider"
+            ],
+            "aliases": {
+                "HelloWorld": "Luchavez\\HelloWorld\\Facades\\HelloWorld"
+            }
+        },
+        "branch-alias": {
+            "dev-main": "1.0.x-dev",
+            "dev-master": "1.0.x-dev",
+            "dev-develop": "1.0.x-dev",
+            "dev-feature": "1.0.x-dev"
+        }
+    }
+}
